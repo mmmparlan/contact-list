@@ -1,23 +1,20 @@
-import { useState, useEffect } from 'react'
+//import { useState, useEffect } from 'react'
 
 import './App.css'
+import ContactList from './components/ContactList.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  },[]);
+  // },[]);
 
   return (
     <>
-      
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        
+      <ContactList />  
     </>
-  )
+  );
 }
 
 export default App
