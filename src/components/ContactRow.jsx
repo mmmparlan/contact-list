@@ -1,22 +1,19 @@
 import React from 'react'
-
+import {useState} from 'react'
 
 export default function ContactRow({ contact, selectedContactId,setSelectedContactId}){
+    const [successMessage, setSuccessMessage] = useState(null);
+    const [error, setError] = useState(null);
+
+    async function handleClick(){
+            selectedContactId = contact.id;
+            console.log(contact.id)
+            console.log("handleClick initiated")
+            
+        } 
 
     return(
-        <tr onClick={()=> {
-            console.log("onClick activiated!");
-            selectedContactId = setSelectedContactId((selectedContactId) = contact.id);
-            selectedContactId;
-            
-            // <div className="App">
-            // {puppies.map((puppy) => {
-            // return <p onClick={()=>{ setFeatPupId(puppy.id)
-            // }} key={puppy.id}>{puppy.name}</p>
-            // })}
-            //{() => {setCount((count) = count + 1)}}
-
-        }}
+        <tr onClick={handleClick}
         >
             <td>{contact.name}</td>
             <td>{contact.email}</td>
