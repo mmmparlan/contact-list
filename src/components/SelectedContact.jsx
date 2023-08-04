@@ -26,8 +26,22 @@ export default function SelectedContact({selectedContactId, setSelectedContactId
 
     return (
         <>
-        
-        </>
+        <h2>Selected Contact</h2>
+        {contact ? (
+        <>
+            <p>Name: {contact.name}</p>
+            <p>Usersname: {contact.username}</p>
+            <p>Email: {contact.email}</p>
+            <p>City: {contact.address.city}</p>
+            <p>Phone: {contact.phone}</p>
+            <p>Website: {contact.website}</p>
+            <p>Comppany name: {contact.company.name}</p>
 
+        </>
+        ) : (
+            <p>loading! wait a second</p>
+        )}{""}
+        <button onClick={()=> setSelectedContactId(null)}>clear</button>
+        </>
     );
 }
